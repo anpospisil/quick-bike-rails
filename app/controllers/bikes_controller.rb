@@ -1,6 +1,6 @@
 class BikesController < ApplicationController
-  before_action :authenticate_request!, except: [:index, :show]
-  before_action :set_bike, only: [:show, :update]
+  before_action :authenticate_request!, except: [ :index, :show ]
+  before_action :set_bike, only: [ :show, :update ]
 
   def index
     render json: Bike.all
